@@ -12,11 +12,13 @@
 
 :root {
   /* Colors */
+  --light-primary-color: #222749;
   --primary-color: #0b113a;
-  --dark-primary-color: #222749;
+  --darker-primary-color: #090e34;
   --primary-text-color: #fff;
   --secondary-color: #4a6cf7;
   --light-grey: #ccc;
+  --color-grey: #959cb1;
 
   --bold-text: 700;
 }
@@ -46,9 +48,45 @@ body {
   padding: 0 4.8rem;
 }
 
+.header-primary {
+  line-height: 1.2;
+  font-size: 5.2rem;
+}
+
+.header-secondary {
+  font-size: 5.2rem;
+}
+
+.section-title-description {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+.section-title-description .section-description,
+.section-title-description .section-title {
+  width: 50%;
+  text-align: center;
+}
+
+.section-title-description .section-description {
+  font-size: 1.8rem;
+  color: var(--color-grey);
+  line-height: 1.5;
+}
+
+.align-vertically-center {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
 .btn,
 .btn:link,
 .btn:visited {
+  display: inline-block;
   font-weight: var(--bold-text);
   color: var(--primary-text-color);
   text-decoration: none;
@@ -72,7 +110,7 @@ body {
 .btn--primary-dark,
 .btn--primary-dark:link,
 .btn--primary-dark:visited {
-  background-color: var(--dark-primary-color);
+  background-color: var(--light-primary-color);
   color: var(--primary-text-color);
 }
 
@@ -89,7 +127,7 @@ body {
 
 .drop-down-items {
   position: absolute;
-  background-color: var(--dark-primary-color);
+  background-color: var(--light-primary-color);
   border-radius: 2rem;
   padding: 3.2rem;
   margin-top: var(--gap);

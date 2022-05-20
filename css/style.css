@@ -1,11 +1,47 @@
 /*********************/
+/* Header And nav */
+/*********************/
+.header {
+  position: relative;
+  background-color: var(--darker-primary-color);
+  padding: 22rem 0;
+}
+
+.background-header-1,
+.background-header-2 {
+  position: absolute;
+  z-index: 2;
+}
+
+.background-header-1 {
+  height: 40rem;
+  right: 0;
+  top: 0;
+}
+
+.background-header-2 {
+  height: 20rem;
+  bottom: 0;
+  left: 0;
+}
+
+/*********************/
 /* Main navigation */
 /*********************/
+.main-nav {
+  position: fixed;
+  background-color: inherit;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
 .main-nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 3.2rem 6.4rem;
+  padding: 3.2rem 0;
   font-size: 1.6rem;
 }
 
@@ -40,4 +76,34 @@
 .change-color-display {
   cursor: pointer;
   font-size: 3.2rem;
+}
+
+/*********************/
+/* header-content */
+/*********************/
+.main-header-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 2rem;
+  line-height: 1.5;
+  gap: 4.8rem;
+}
+
+.main-header-content .header-primary,
+.header-description {
+  width: 60%;
+}
+
+.main-header-content .btn {
+  font-size: 1.6rem;
+}
+
+/*********************/
+/* Features section */
+/*********************/
+.features-section {
+  padding: 9.6rem 0;
 }
