@@ -12,6 +12,7 @@
 
 :root {
   /* Colors */
+  --light-primary-color-background: #111a4e;
   --light-primary-color: #222749;
   --primary-color: #0b113a;
   --darker-primary-color: #090e34;
@@ -43,7 +44,7 @@ body {
 
 /* Reusable classes */
 .container {
-  width: 120rem;
+  width: 140rem;
   margin: 0 auto;
   padding: 0 4.8rem;
 }
@@ -112,6 +113,24 @@ body {
 .btn--primary-dark:visited {
   background-color: var(--light-primary-color);
   color: var(--primary-text-color);
+}
+
+.grid {
+  display: grid;
+  column-gap: 6.4rem;
+  row-gap: 9.4rem;
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .drop-down {
