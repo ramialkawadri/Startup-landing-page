@@ -145,24 +145,38 @@ body {
 }
 
 .drop-down-items {
+  /* Change this to change padding */
+  --padding: 3.2rem;
   position: absolute;
   background-color: var(--light-primary-color);
   border-radius: 2rem;
-  padding: 3.2rem;
   margin-top: var(--gap);
-  min-width: 28rem;
-  transition: all 0.4s;
-
-  /* Hiding it */
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
+  min-width: 32rem;
+  display: none;
+  overflow: hidden;
+  animation-fill-mode: forwards;
 }
 
-.drop-down:hover .drop-down-items {
-  opacity: 1;
-  pointer-events: auto;
-  visibility: initial;
+@keyframes showDropDown {
+  0% {
+    max-height: 0;
+    margin-top: calc(var(--gap) / -10);
+  }
+
+  100% {
+    /* Excepted that the item will never get this big */
+    max-height: 50rem;
+    overflow: visible;
+    margin-top: var(--gap);
+  }
+}
+
+.drop-down:hover .drop-down-items,
+.drop-down:active .drop-down-items,
+.drop-down:focus-within .drop-down-items {
+  display: block;
+  animation: showDropDown 1s;
 }
 
 /* A transparent element so the drop down don't hide */
@@ -178,6 +192,8 @@ body {
 }
 
 .drop-down-items ul {
+  /* Margin is added instead of padding because of the animation */
+  margin: var(--padding);
   list-style: none;
   display: flex;
   flex-direction: column;
