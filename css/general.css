@@ -49,6 +49,10 @@ body {
   padding: 0 4.8rem;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .header-primary {
   line-height: 1.2;
   font-size: 5.2rem;
@@ -59,7 +63,6 @@ body {
 }
 
 .section-title-description {
-  text-align: center;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -68,8 +71,7 @@ body {
 
 .section-title-description .section-description,
 .section-title-description .section-title {
-  width: 50%;
-  text-align: center;
+  width: 60%;
 }
 
 .section-title-description .section-description {
@@ -147,18 +149,39 @@ body {
 .drop-down-items {
   /* Change this to change padding */
   --padding: 3.2rem;
+  --animation-time: 1s;
   position: absolute;
   background-color: var(--light-primary-color);
   border-radius: 2rem;
   margin-top: var(--gap);
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
   min-width: 32rem;
-  display: none;
   overflow: hidden;
+  max-height: 0;
+}
+
+.drop-down.show-drop-items .drop-down-items {
+  animation: showDropDownAnimation var(--animation-time);
   animation-fill-mode: forwards;
 }
 
-@keyframes showDropDown {
+.drop-down.hide-drop-items .drop-down-items {
+  animation: hideDropDownAnimation calc(var(--animation-time) / 2);
+  animation-fill-mode: forwards;
+}
+
+@keyframes hideDropDownAnimation {
+  0% {
+    max-height: 50rem;
+  }
+
+  100% {
+    max-height: 0;
+    overflow: hidden;
+  }
+}
+
+@keyframes showDropDownAnimation {
   0% {
     max-height: 0;
     margin-top: calc(var(--gap) / -10);
@@ -170,13 +193,6 @@ body {
     overflow: visible;
     margin-top: var(--gap);
   }
-}
-
-.drop-down:hover .drop-down-items,
-.drop-down:active .drop-down-items,
-.drop-down:focus-within .drop-down-items {
-  display: block;
-  animation: showDropDown 1s;
 }
 
 /* A transparent element so the drop down don't hide */
@@ -206,4 +222,10 @@ body {
 
 .drop-down ul > *:hover {
   opacity: 0.7;
+}
+
+.hidden {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  visibility: hidden !important;
 }
