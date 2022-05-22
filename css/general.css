@@ -12,6 +12,7 @@
 
 :root {
   /* Colors */
+  --lightest-primary-color: #1d2144;
   --light-primary-color-background: #111a4e;
   --light-primary-color: #222749;
   --primary-color: #0b113a;
@@ -74,7 +75,7 @@ body {
   width: 60%;
 }
 
-.section-title-description .section-description {
+.section-description {
   font-size: 1.8rem;
   color: var(--color-grey);
   line-height: 1.5;

@@ -1,3 +1,5 @@
+"use strict";
+
 // Drop down animation
 document.querySelectorAll(".drop-down").forEach((current) => {
   current.addEventListener("mouseover", () => {
