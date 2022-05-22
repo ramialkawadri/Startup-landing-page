@@ -136,6 +136,9 @@ body {
   grid-template-columns: repeat(4, 1fr);
 }
 
+/*********************/
+/* Drop down begin */
+/*********************/
 .drop-down {
   --gap: 2.4rem;
 }
@@ -148,51 +151,77 @@ body {
 }
 
 .drop-down-items {
-  /* Change this to change padding */
-  --padding: 3.2rem;
-  --animation-time: 1s;
   position: absolute;
   background-color: var(--light-primary-color);
   border-radius: 2rem;
   margin-top: var(--gap);
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
   min-width: 32rem;
-  overflow: hidden;
-  max-height: 0;
+  overflow: visible;
 }
 
-.drop-down.show-drop-items .drop-down-items {
+.drop-down-items ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  max-height: 0;
+  overflow: hidden;
+
+  /* To change padding */
+  --padding: 3.2rem;
+  --animation-time: 1s;
+}
+
+/* Padding added this way to make animation work */
+.drop-down-items ul li {
+  padding: 0 var(--padding);
+}
+
+.drop-down-items ul li:first-child {
+  padding-top: var(--padding);
+}
+
+.drop-down-items ul li:last-child {
+  padding-bottom: var(--padding);
+}
+
+/* All this related to animations */
+.drop-down.hide-drop-items .drop-down-items {
+  pointer-events: none;
+}
+
+/* These classes are added by JS */
+.drop-down.show-drop-items ul {
   animation: showDropDownAnimation var(--animation-time);
   animation-fill-mode: forwards;
 }
 
-.drop-down.hide-drop-items .drop-down-items {
-  animation: hideDropDownAnimation calc(var(--animation-time) / 2);
+.drop-down.hide-drop-items ul {
+  animation: hideDropDownAnimation var(--animation-time);
   animation-fill-mode: forwards;
 }
 
-@keyframes hideDropDownAnimation {
-  0% {
-    max-height: 50rem;
-  }
-
-  100% {
-    max-height: 0;
-    overflow: hidden;
-  }
-}
-
 @keyframes showDropDownAnimation {
-  0% {
+  from {
     max-height: 0;
-    margin-top: calc(var(--gap) / -10);
   }
 
-  100% {
+  to {
     /* Excepted that the item will never get this big */
     max-height: 50rem;
     overflow: visible;
-    margin-top: var(--gap);
+  }
+}
+
+@keyframes hideDropDownAnimation {
+  from {
+    max-height: 50rem;
+  }
+
+  to {
+    max-height: 0;
+    overflow: hidden;
   }
 }
 
@@ -202,19 +231,15 @@ body {
   display: block;
   position: absolute;
   top: 0;
-  left: -2rem;
+  left: 0;
   right: 0;
   transform: translateY(-50%);
   height: calc(var(--gap) * 2);
+  display: none;
 }
 
-.drop-down-items ul {
-  /* Margin is added instead of padding because of the animation */
-  margin: var(--padding);
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 2.4rem;
+.drop-down:hover .drop-down-items::before {
+  display: block;
 }
 
 .drop-down-items ul > * {
@@ -224,6 +249,10 @@ body {
 .drop-down ul > *:hover {
   opacity: 0.7;
 }
+
+/*********************/
+/* Drop down end */
+/*********************/
 
 .hidden {
   opacity: 0 !important;

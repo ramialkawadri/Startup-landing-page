@@ -2,6 +2,8 @@
 
 // Drop down animation
 document.querySelectorAll(".drop-down").forEach((current) => {
+  console.log(current);
+
   current.addEventListener("mouseover", () => {
     current.classList.remove("hide-drop-items");
     current.classList.add("show-drop-items");
@@ -29,7 +31,6 @@ videoPlayButton.addEventListener("click", () => {
 videoCloseButton.addEventListener("click", closeVideoPlayer);
 
 document.body.addEventListener("keydown", (e) => {
-  if (e.key === "Escape" && !videoPlayer.classList.contains("hidden")) {
+  if (e.key === "Escape" && !videoPlayer.classList.contains("hidden"))
     closeVideoPlayer();
-  }
 });
