@@ -1,20 +1,5 @@
 "use strict";
 
-// Drop down animation
-document.querySelectorAll(".drop-down").forEach((current) => {
-  console.log(current);
-
-  current.addEventListener("mouseover", () => {
-    current.classList.remove("hide-drop-items");
-    current.classList.add("show-drop-items");
-  });
-
-  current.addEventListener("mouseleave", () => {
-    current.classList.remove("show-drop-items");
-    current.classList.add("hide-drop-items");
-  });
-});
-
 // Video player
 const videoPlayer = document.querySelector(".video-player");
 const videoPlayButton = document.querySelector(".video-start-icon");

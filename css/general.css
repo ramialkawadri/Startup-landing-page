@@ -141,13 +141,7 @@ body {
 /*********************/
 .drop-down {
   --gap: 2.4rem;
-}
-
-.drop-down ul a:link,
-.drop-down ul a:visited {
-  color: var(--primary-text-color);
-  text-decoration: none;
-  position: relative;
+  --animation-time: 0.8s;
 }
 
 .drop-down-items {
@@ -157,75 +151,24 @@ body {
   margin-top: var(--gap);
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
   min-width: 32rem;
-  overflow: visible;
-}
 
-.drop-down-items ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 2.4rem;
-  max-height: 0;
-  overflow: hidden;
-
-  /* To change padding */
-  --padding: 3.2rem;
-  --animation-time: 1s;
-}
-
-/* Padding added this way to make animation work */
-.drop-down-items ul li {
-  padding: 0 var(--padding);
-}
-
-.drop-down-items ul li:first-child {
-  padding-top: var(--padding);
-}
-
-.drop-down-items ul li:last-child {
-  padding-bottom: var(--padding);
-}
-
-/* All this related to animations */
-.drop-down.hide-drop-items .drop-down-items {
+  /* Hiding and showing the list */
+  transition: all calc(var(--animation-time) / 2)
+    calc(var(--animation-time) / 2);
   pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
 }
 
-/* These classes are added by JS */
-.drop-down.show-drop-items ul {
-  animation: showDropDownAnimation var(--animation-time);
-  animation-fill-mode: forwards;
+.drop-down:hover .drop-down-items,
+.drop-down:focus-within .drop-down-items {
+  transition: all calc(var(--animation-time) / 2) 0s;
+  pointer-events: auto;
+  visibility: visible;
+  opacity: 1;
 }
 
-.drop-down.hide-drop-items ul {
-  animation: hideDropDownAnimation var(--animation-time);
-  animation-fill-mode: forwards;
-}
-
-@keyframes showDropDownAnimation {
-  from {
-    max-height: 0;
-  }
-
-  to {
-    /* Excepted that the item will never get this big */
-    max-height: 50rem;
-    overflow: visible;
-  }
-}
-
-@keyframes hideDropDownAnimation {
-  from {
-    max-height: 50rem;
-  }
-
-  to {
-    max-height: 0;
-    overflow: hidden;
-  }
-}
-
-/* A transparent element so the drop down don't hide */
+/* A transparent element so the drop down don't hide when moving the mouse */
 .drop-down-items::before {
   content: "";
   display: block;
@@ -238,18 +181,40 @@ body {
   display: none;
 }
 
-.drop-down:hover .drop-down-items::before {
+.drop-down:hover .drop-down-items::before,
+.drop-down:focus-within .drop-down-items::before {
   display: block;
 }
 
-.drop-down-items ul > * {
+/* Inner List */
+.drop-down-items ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  max-height: 0;
+  overflow: hidden;
+  padding: 3.2rem;
+  transition: all var(--animation-time);
+}
+
+.drop-down:hover ul,
+.drop-down:focus-within ul {
+  max-height: 50rem;
+}
+
+.drop-down ul a:link,
+.drop-down ul a:visited {
+  color: var(--primary-text-color);
+  text-decoration: none;
+  position: relative;
   transition: all 0.3s;
 }
 
-.drop-down ul > *:hover {
+.drop-down ul a:hover,
+.drop-down ul a:active {
   opacity: 0.7;
 }
-
 /*********************/
 /* Drop down end */
 /*********************/
