@@ -7,13 +7,6 @@
   padding: 22rem 0;
 }
 
-.background-header-1,
-.background-header-2 {
-  pointer-events: none;
-  position: absolute;
-  z-index: 2;
-}
-
 .background-header-1 {
   height: 40rem;
   right: 0;
@@ -31,7 +24,7 @@
 /*********************/
 .main-nav {
   position: fixed;
-  background-color: inherit;
+  background-color: transparent;
   top: 0;
   left: 0;
   right: 0;
@@ -312,7 +305,7 @@
   font-weight: 900;
   font-size: 3.2rem;
   padding: 0.4rem;
-  color: var(--color-grey);
+  color: var(--secondary-color);
 }
 
 .usage-text-box h4 {
@@ -327,6 +320,17 @@
 .testimonials-section {
   background-color: var(--darker-primary-color);
   padding: 9.6rem 0;
+  position: relative;
+}
+
+.testimonail-background-1 {
+  top: 0;
+  right: 0;
+}
+
+.testimonail-background-2 {
+  bottom: 0;
+  left: 0;
 }
 
 .testimonials {
@@ -376,4 +380,91 @@
 .testimonial-footer p {
   color: var(--color-grey);
   font-size: 1.6rem;
+}
+
+/*********************/
+/* pricing section */
+/*********************/
+.pricing-section {
+  padding: 9.6rem 0;
+  position: relative;
+}
+
+.pricing-section .pricing-background-1 {
+  left: 0;
+  bottom: 0;
+}
+
+.pricing-section h2 {
+  line-height: 1.1;
+}
+
+.prices {
+  column-gap: 3.2rem;
+}
+
+.price-item {
+  background-color: var(--lightest-primary-color);
+  padding: 3.2rem;
+  border-radius: 11px;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  font-size: 1.6rem;
+  line-height: 1.5;
+
+  position: relative;
+}
+
+.price-item .price-background-image {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.price-item .price-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price-item .price-header h3 {
+  font-size: 3.2rem;
+}
+
+.price-item .price-header p {
+  font-size: 2rem;
+  font-weight: var(--bold-text);
+}
+
+.price-item .price-description {
+  color: var(--color-grey);
+}
+
+.price-item .btn {
+  text-align: center;
+}
+
+.price-item .price-list {
+  list-style: none;
+  padding-top: 3.2rem;
+  border-top: 1px solid rgba(51, 51, 51, 0.8);
+}
+
+.price-item .price-list li {
+  color: var(--color-grey);
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+.price-item .price-list li:not(:last-child) {
+  margin-bottom: 1.6rem;
+}
+
+.price-item .price-icon {
+  padding: 0.4rem;
+  background-color: var(--light-primary-color);
+  color: var(--secondary-color);
+  border-radius: 50%;
 }

@@ -18,6 +18,10 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <a href="#" class="btn btn--primary top-button hidden"
+      ><ion-icon name="chevron-up-outline"></ion-icon
+    ></a>
+
     <header class="header">
       <nav class="main-nav">
         <div class="container main-nav-container">
@@ -87,8 +91,14 @@
       </div>
 
       <!-- Background images -->
-      <img src="img/header/header-1.svg" class="background-header-1" />
-      <img src="img/header/header-2.svg" class="background-header-2" />
+      <img
+        src="img/header/header-1.svg"
+        class="background background-header-1"
+      />
+      <img
+        src="img/header/header-2.svg"
+        class="background background-header-2"
+      />
     </header>
 
     <main>
@@ -339,6 +349,16 @@
       </section>
 
       <section class="testimonials-section">
+        <img
+          src="img/testimonials/background-1.svg"
+          class="background testimonail-background-1"
+        />
+
+        <img
+          src="img/testimonials/background-2.svg"
+          class="background testimonail-background-2"
+        />
+
         <div class="container">
           <div class="section-title-description text-center">
             <h2 class="header-secondary section-title">What Our Users Says</h2>
@@ -350,7 +370,7 @@
         </div>
 
         <div class="container testimonials">
-          <div class="testimonial">
+          <figure class="testimonial">
             <div class="testimonial-rating">
               <ion-icon name="star"></ion-icon>
               <ion-icon name="star"></ion-icon>
@@ -359,10 +379,10 @@
               <ion-icon name="star"></ion-icon>
             </div>
 
-            <p class="testimonial-text">
+            <blockquote class="testimonial-text">
               “Our members are so impressed. It's intuitive. It's clean. It's
               distraction free. If you're building a community.
-            </p>
+            </blockquote>
 
             <div class="testimonial-footer">
               <img
@@ -376,9 +396,9 @@
                 <p>Founder @TailGrids</p>
               </div>
             </div>
-          </div>
+          </figure>
 
-          <div class="testimonial">
+          <figure class="testimonial">
             <div class="testimonial-rating">
               <ion-icon name="star"></ion-icon>
               <ion-icon name="star"></ion-icon>
@@ -387,10 +407,10 @@
               <ion-icon name="star"></ion-icon>
             </div>
 
-            <p class="testimonial-text">
+            <blockquote class="testimonial-text">
               “Our members are so impressed. It's intuitive. It's clean. It's
               distraction free. If you're building a community.
-            </p>
+            </blockquote>
 
             <div class="testimonial-footer">
               <img
@@ -404,9 +424,9 @@
                 <p>Founder @UIdeck</p>
               </div>
             </div>
-          </div>
+          </figure>
 
-          <div class="testimonial">
+          <figure class="testimonial">
             <div class="testimonial-rating">
               <ion-icon name="star"></ion-icon>
               <ion-icon name="star"></ion-icon>
@@ -415,10 +435,10 @@
               <ion-icon name="star"></ion-icon>
             </div>
 
-            <p class="testimonial-text">
+            <blockquote class="testimonial-text">
               “Our members are so impressed. It's intuitive. It's clean. It's
               distraction free. If you're building a community.
-            </p>
+            </blockquote>
 
             <div class="testimonial-footer">
               <img
@@ -431,6 +451,227 @@
                 <h3>Lethium Frenci</h3>
                 <p>Founder @Lineicons</p>
               </div>
+            </div>
+          </figure>
+        </div>
+      </section>
+
+      <section class="pricing-section">
+        <img
+          src="img/prices/section-background.svg"
+          class="background pricing-background-1"
+        />
+
+        <div class="container">
+          <div class="section-title-description text-center">
+            <h2 class="header-secondary section-title">
+              Simple and Affordable Pricing What Our Users Says
+            </h2>
+            <p class="section-description">
+              There are many variations of passages of Lorem Ipsum available but
+              the majority have suffered alteration in some form.
+            </p>
+          </div>
+
+          <div class="center-horizontally margin-vertically-high">
+            <div class="toggle-button">
+              <div class="toggle-text-1">Monthly</div>
+              <div class="toggle-slider"></div>
+
+              <div class="toggle-text-1">Yearly</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="prices grid grid--3-cols">
+            <div class="price-item">
+              <img
+                src="img/prices/background.svg"
+                class="price-background-image"
+              />
+
+              <div class="price-header">
+                <h3>$40 <span class="grey-text">/mo</span></h3>
+                <p>Lite</p>
+              </div>
+              <div class="price-description">
+                Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim.
+              </div>
+              <a href="#" class="btn btn--primary"> Start Free Trail </a>
+
+              <ul class="price-list">
+                <li>
+                  <ion-icon
+                    name="checkmark-outline"
+                    class="price-icon"
+                  ></ion-icon>
+                  All UI Components
+                </li>
+
+                <li>
+                  <ion-icon
+                    name="checkmark-outline"
+                    class="price-icon"
+                  ></ion-icon>
+                  Use with Unlimited Projects
+                </li>
+
+                <li>
+                  <ion-icon
+                    name="checkmark-outline"
+                    class="price-icon"
+                  ></ion-icon>
+                  Commercial Use
+                </li>
+
+                <li>
+                  <ion-icon
+                    name="checkmark-outline"
+                    class="price-icon"
+                  ></ion-icon>
+                  Email Support
+                </li>
+
+                <li>
+                  <ion-icon name="close-outline" class="price-icon"></ion-icon>
+                  Lifetime Access
+                </li>
+
+                <li>
+                  <ion-icon name="close-outline" class="price-icon"></ion-icon>
+                  Free Lifetime Updates
+                </li>
+              </ul>
+            </div>
+
+            <div class="price-item">
+              <img
+                src="img/prices/background.svg"
+                class="price-background-image"
+              />
+
+              <div class="price-header">
+                <h3>$399 <span class="grey-text">/mo</span></h3>
+                <p>Basic</p>
+              </div>
+              <div class="price-description">
+                Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim.
+              </div>
+              <a href="#" class="btn btn--primary"> Start Free Trail </a>
+
+              <ul class="price-list">
+                <li>
+                  <ion-icon
+                    name="checkmark-outline"
+                    class="price-icon"
+                  ></ion-icon>
+                  All UI Components
+                </li>
+
+                <li>
+                  <ion-icon
+                    name="checkmark-outline"
+                    class="price-icon"
+                  ></ion-icon>
+                  Use with Unlimited Projects
+                </li>
+
+                <li>
+                  <ion-icon
+                    name="checkmark-outline"
+                    class="price-icon"
+                  ></ion-icon>
+                  Commercial Use
+                </li>
+
+                <li>
+                  <ion-icon
+                    name="checkmark-outline"
+                    class="price-icon"
+                  ></ion-icon>
+                  Email Support
+                </li>
+
+                <li>
+                  <ion-icon
+                    name="checkmark-outline"
+                    class="price-icon"
+                  ></ion-icon>
+                  Lifetime Access
+                </li>
+
+                <li>
+                  <ion-icon name="close-outline" class="price-icon"></ion-icon>
+                  Free Lifetime Updates
+                </li>
+              </ul>
+            </div>
+
+            <div class="price-item">
+              <img
+                src="img/prices/background.svg"
+                class="price-background-image"
+              />
+
+              <div class="price-header">
+                <h3>$589 <span class="grey-text">/mo</span></h3>
+                <p>Plus</p>
+              </div>
+              <div class="price-description">
+                Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim.
+              </div>
+              <a href="#" class="btn btn--primary"> Start Free Trail </a>
+
+              <ul class="price-list">
+                <li>
+                  <ion-icon
+                    name="checkmark-outline"
+                    class="price-icon"
+                  ></ion-icon>
+                  All UI Components
+                </li>
+
+                <li>
+                  <ion-icon
+                    name="checkmark-outline"
+                    class="price-icon"
+                  ></ion-icon>
+                  Use with Unlimited Projects
+                </li>
+
+                <li>
+                  <ion-icon
+                    name="checkmark-outline"
+                    class="price-icon"
+                  ></ion-icon>
+                  Commercial Use
+                </li>
+
+                <li>
+                  <ion-icon
+                    name="checkmark-outline"
+                    class="price-icon"
+                  ></ion-icon>
+                  Email Support
+                </li>
+
+                <li>
+                  <ion-icon
+                    name="checkmark-outline"
+                    class="price-icon"
+                  ></ion-icon>
+                  Lifetime Access
+                </li>
+
+                <li>
+                  <ion-icon
+                    name="checkmark-outline"
+                    class="price-icon"
+                  ></ion-icon>
+                  Free Lifetime Updates
+                </li>
+              </ul>
             </div>
           </div>
         </div>
