@@ -44,6 +44,15 @@ body {
   position: relative;
 }
 
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  cursor: pointer;
+  font-size: inherit;
+  font-family: inherit;
+}
+
 /* Reusable classes */
 .top-button {
   display: none;

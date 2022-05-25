@@ -4,7 +4,7 @@
 const mainNavlEl = document.querySelector(".main-nav");
 const buttonUpEl = document.querySelector(".top-button");
 
-document.addEventListener("scroll", (e) => {
+document.addEventListener("scroll", () => {
   if (window.scrollY > 100) {
     mainNavlEl.style.backgroundColor = "inherit";
     buttonUpEl.classList.remove("hidden");
