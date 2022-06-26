@@ -16,6 +16,7 @@
   --light-primary-color-background: #111a4e;
   --light-primary-color: #222749;
   --primary-color: #0b113a;
+  --footer-background: #0d123e;
   --darker-primary-color: #090e34;
   --primary-text-color: #fff;
   --secondary-color: #4a6cf7;
@@ -40,7 +41,7 @@ body {
   background-color: var(--primary-color);
   color: var(--primary-text-color);
   line-height: 1;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   position: relative;
 }
 
@@ -194,7 +195,7 @@ button {
 
 /* A transparent element so the drop down don't hide when moving the mouse */
 .drop-down-items::before {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   top: 0;
@@ -288,7 +289,7 @@ button {
 }
 
 .toggle-button .toggle-slider::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   top: 50%;
