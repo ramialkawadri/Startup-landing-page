@@ -67,9 +67,23 @@
   gap: 2.4rem;
 }
 
-.change-color-display {
-  cursor: pointer;
+#nav-button {
   font-size: 3.2rem;
+  cursor: pointer;
+  display: none;
+  height: 3.2rem;
+}
+
+#nav-button .close-icon {
+  display: none;
+}
+
+#nav-button.open .menu-icon {
+  display: none;
+}
+
+#nav-button.open .close-icon {
+  display: initial;
 }
 
 /*********************/

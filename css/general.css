@@ -170,6 +170,7 @@ button {
 }
 
 .drop-down-items {
+  z-index: 2;
   position: absolute;
   background-color: var(--light-primary-color);
   border-radius: 2rem;
